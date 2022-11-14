@@ -1,3 +1,4 @@
+var assert = require('assert');
 const {Before, Given, When, Then} = require('@cucumber/cucumber');
 
 let x;
@@ -14,7 +15,7 @@ Given('I buy the plant worth ${int}', function (int) {
 );
 
 Then('I should have ${int} in my account', function (int) {
-    console.log(x+y);
+    assert.equal(x+y, int);
     }
 );
 
