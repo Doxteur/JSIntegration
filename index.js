@@ -3,11 +3,10 @@ var faker = faker.faker;
 
 var utils = require("./utils/utils.js");
 var bdd = require("./database/bddConnect.js");
-
+//use mocka
 var connection = bdd.connectBdd();
 
 var separator = "====================================";
-
 
 console.log(separator);
 console.log("Suppression des tables");

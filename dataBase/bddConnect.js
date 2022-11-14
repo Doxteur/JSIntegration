@@ -3,7 +3,6 @@ var mysql = require('mysql');
 require('dotenv').config();
 
 
-
 function connectBdd() {
     var connection = mysql.createConnection({
         host: process.env.DB_HOST,
