@@ -1,29 +1,33 @@
-var faker = require('@faker-js/faker');
+var faker = require("@faker-js/faker");
 var faker = faker.faker;
 
-var utils = require('./utils.js');
-var bdd = require('./bddConnect.js');
+var utils = require("./utils/utils.js");
+var bdd = require("./database/bddConnect.js");
 
 var connection = bdd.connectBdd();
 
-utils.clearBDD(connection);
+var separator = "====================================";
 
 
-utils.insertActeur(connection,faker);
-utils.insertRealisateur(connection,faker);
-utils.insertFilm(connection,faker);
-utils.insertseance(connection,faker);
-utils.insertRole(connection);
-utils.insertplace(connection);
-utils.insertcategoriePlace(connection);
-utils.insertcategorieSeance(connection);
-utils.insertTarif(connection);
-utils.insertReservation(connection,faker);
+console.log(separator);
+console.log("Suppression des tables");
+console.log(separator);
 
-
-bdd.closeConnection(connection);
-
-
-
-
-
+utils.clearBDD(connection).then(function () {
+  console.log(separator);
+  console.log("BDD cleared");
+  console.log(separator);
+  console.log("Insertion des données");
+  console.log(separator);
+  utils.insertActeur(connection, faker);
+  utils.insertRealisateur(connection, faker);
+  utils.insertFilm(connection, faker);
+  utils.insertseance(connection, faker);
+  utils.insertRole(connection);
+  utils.insertplace(connection);
+  utils.insertcategoriePlace(connection);
+  utils.insertcategorieSeance(connection);
+  utils.insertTarif(connection);
+  utils.insertReservation(connection, faker);
+  bdd.closeConnection(connection);
+});
