@@ -1,13 +1,16 @@
 
 var mysql = require('mysql');
+require('dotenv').config();
+
+
 
 function connectBdd() {
     var connection = mysql.createConnection({
-        host: 'b3-sql-cinema.cvb2mw4ufkxt.eu-west-3.rds.amazonaws.com',
-        user: 'admin',
-        password: 'jimmynils',
-        database: 'B3_SQL_CINEMA',
-        port: 3306
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        database: process.env.DB_DATABASE,
+        port: process.env.DB_PORT
     });
  
 
