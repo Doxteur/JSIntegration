@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "mysql": "^2.18.1"
+  },
+  "devDependencies": {
+    "@faker-js/faker": "^7.5.0"
+  },
+  "name": "jsintegration",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "createBdd": "node createBdd.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
