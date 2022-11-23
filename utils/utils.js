@@ -1,4 +1,5 @@
 function clearBDD(connection) {
+  
   connection.query("SET FOREIGN_KEY_CHECKS=0", function (err, result) {
     if (err) throw err;
     console.log("Foreign key check disabled");
@@ -51,6 +52,7 @@ function clearBDD(connection) {
     }, 1000);
   });
 }
+
 
 //Insert
 
@@ -331,4 +333,5 @@ module.exports = {
   insertcategorieSeance: insertcategorieSeance,
   insertTarif: insertTarif,
   insertReservation: insertReservation,
+  createTables: createTables,
 };

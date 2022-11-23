@@ -1,7 +1,7 @@
-
 var mysql = require('mysql');
-require('dotenv').config();
 
+//use dotenv
+require('dotenv').config();
 
 function connectBdd() {
     var connection = mysql.createConnection({
@@ -11,7 +11,6 @@ function connectBdd() {
         database: process.env.DB_DATABASE,
         port: process.env.DB_PORT
     });
- 
 
     connection.connect(function (err) {
         if (err) throw err;

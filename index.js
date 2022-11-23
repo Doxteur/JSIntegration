@@ -6,6 +6,7 @@ var bdd = require("./database/bddConnect.js");
 //use mocka
 var connection = bdd.connectBdd();
 
+
 var separator = "====================================";
 
 console.log(separator);
@@ -30,3 +31,5 @@ utils.clearBDD(connection).then(function () {
   utils.insertReservation(connection, faker);
   bdd.closeConnection(connection);
 });
+
+// Run test
