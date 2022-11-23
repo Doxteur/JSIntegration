@@ -19,6 +19,22 @@ function connectBdd() {
     return connection;
 }
 
+function connectNoDatabaseName() {
+    var connection = mysql.createConnection({
+        host: process.env.DB_HOST,
+        user: process.env.DB_USER,
+        password: process.env.DB_PASSWORD,
+        port: process.env.DB_PORT
+    });
+
+    connection.connect(function (err) {
+        if (err) throw err;
+        console.log("Connected!");
+    });
+    return connection;
+}
+
+
 function closeConnection(connection) {
     connection.end();
     console.log("Connection closed");
@@ -26,5 +42,6 @@ function closeConnection(connection) {
 
 module.exports = {
     connectBdd: connectBdd,
-    closeConnection: closeConnection
+    closeConnection: closeConnection,
+    connectNoDatabaseName: connectNoDatabaseName
 }

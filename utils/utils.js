@@ -333,5 +333,4 @@ module.exports = {
   insertcategorieSeance: insertcategorieSeance,
   insertTarif: insertTarif,
   insertReservation: insertReservation,
-  createTables: createTables,
 };

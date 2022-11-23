@@ -13,6 +13,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "create": "node dataBase/createTables.js",
     "migrate": "node index.js",
     "test": "node test/test.js",
     "start": "nodemon app.js"
