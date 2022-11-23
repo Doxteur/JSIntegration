@@ -27,8 +27,6 @@ connection.query(
     });
     bdd.closeConnection(connectionWithName);
   }
-
 );
-
 
 bdd.closeConnection(connection);
