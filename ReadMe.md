@@ -3,7 +3,7 @@
 
 ## Prérequis 
 
-- Installer [NodeJS](https://nodejs.org/en/download/) (version 8.9.4 LTS)
+- Installer [NodeJS](https://nodejs.org/en/download/) (version 18.12 LTS)
 - Lancer la machine virtuelle ubuntu pour avoir un serveur MariaDB fonctionnel
 - Dupliquer le fichier .env.example et le renommer en .env
 
