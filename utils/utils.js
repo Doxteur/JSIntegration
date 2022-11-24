@@ -244,11 +244,11 @@ function insertcategoriePlace(connection) {
   var values = [];
   var categorie = [
     "Normale",
-    "Enfant",
+    "VIP",
     "Senior",
     "Etudiant",
     "Handicapé",
-    "VIP",
+    "Enfant",
   ];
 
   for (var i = 0; i < categorie.length; i++) {
@@ -267,7 +267,7 @@ function insertplace(connection) {
   var sql = "INSERT INTO place (CATEGORIE_DE_LA_PLACE) VALUES ?";
   var values = [];
 
-  for (var i = 0; i < 5; i++) {
+  for (var i = 0; i < 100; i++) {
     values.push([i]);
   }
 
