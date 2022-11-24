@@ -189,16 +189,20 @@ function insertseance(connection, faker) {
   //reset auto increment
   resetIncrement(connection, "seance");
   var horaire = [
-    "08:00:00",
-    "09:00:00",
-    "10:00:00",
+    
     "12:00:00",
     "14:00:00",
     "16:00:00",
     "18:00:00",
+    "18:30:00",
+    "19:00:00",
+    "19:20:00",
     "20:00:00",
     "22:00:00",
     "00:00:00",
+    "08:00:00",
+    "09:00:00",
+    "10:00:00",
   ];
   var sql =
     "INSERT INTO seance (DATE_SEANCE,HORAIRE,PROJETER,A_POUR_CATEGORIE) VALUES ?";

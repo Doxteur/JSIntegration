@@ -87,3 +87,12 @@ ALTER TABLE `tarif` ADD FOREIGN KEY (`CATEGORIE_DE_LA_SEANCE`) REFERENCES `categ
 ALTER TABLE `tarif` ADD FOREIGN KEY (`CATEGORIE_DE_LA_PLACE`) REFERENCES `categorie_place`(`CATEGORIE_DE_LA_PLACE`);
 ALTER TABLE `seance` ADD FOREIGN KEY (`PROJETER`) REFERENCES `film`(`NUMERO_FILM`);
 ALTER TABLE `seance` ADD FOREIGN KEY (`A_POUR_CATEGORIE`) REFERENCES `categorie_seance`(`CATEGORIE_DE_LA_SEANCE`);
+
+# Trigger  lorsque l’on réalise une réservation sur la place n°1, le fait puis change la catégorie de la place en  catégorie spéciale. Vérifier le fonctionnement du déclencheur.
+
+CREATE TRIGGER `place_speciale` AFTER INSERT ON `reservation` FOR EACH ROW
+BEGIN
+    IF NEW.NUMERO_PLACE = 1 THEN
+        UPDATE place SET CATEGORIE_DE_LA_PLACE = 2 WHERE NUMERO_PLACE = 1;
+    END IF;
+END;
