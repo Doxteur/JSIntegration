@@ -26,3 +26,10 @@
 ## Lancer les tests
 
     - npm test
+
+
+### Pédagogie
+
+- Les scripts sql se trouvent dans le dossier dataBase/*.sql
+- Le script createBdd est joués par la commande npm run migrate
+- Le scripts de seed se trouve dans utils/utils.js

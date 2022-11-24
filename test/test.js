@@ -8,6 +8,7 @@ var connection = bdd.connectBdd();
 
 // query SELECT seance.DATE_SEANCE FROM seance, film, role, acteur WHERE seance.PROJETER = film.NUMERO_FILM AND film.NUMERO_FILM = role.numero_film AND role.NUMERO_ACTEUR = acteur.NUMERO_ACTEUR AND acteur.NUMERO_ACTEUR = 1;
 
+// Test sur la requete numéro 1
 connection.query("SELECT seance.DATE_SEANCE FROM seance, film, role, acteur WHERE seance.PROJETER = film.NUMERO_FILM AND film.NUMERO_FILM = role.numero_film AND role.NUMERO_ACTEUR = acteur.NUMERO_ACTEUR AND acteur.NUMERO_ACTEUR = 1", function (err, result) {
     if (err) {
         assert.fail(err);
