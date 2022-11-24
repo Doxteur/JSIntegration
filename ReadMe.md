@@ -1,19 +1,23 @@
 
 # CinemaBDD
 
-## Importer dans la bdd
+## Prérequis 
 
-createBdd.sql
-createRole.sql
+- Lancer la machine virtuelle ubuntu pour avoir un serveur MariaDB fonctionnel
+- Dupliquer le fichier .env.example et le renommer en .env
 
+
+## Installation
+
+- Configurer le fichier .env avec les informations de votre serveur MariaDB
+
+## Créer la base de données
+
+    - npm run create
 ## Lancer la migration
 
     - npm run migrate
 
-## Lancer le serveur
-
-    - npm start
-
-## Lancer les test
+## Lancer les tests
 
     - npm test
