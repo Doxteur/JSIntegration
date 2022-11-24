@@ -11,6 +11,9 @@
 
 - Configurer le fichier .env avec les informations de votre serveur MariaDB
 
+- Installer les dépendances
+    - npm install
+
 ## Créer la base de données
 
     - npm run create
